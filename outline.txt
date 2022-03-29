@@ -1,0 +1,8 @@
+Four pages
+  First - Landing page, 20-30 gifs, search bar, save gifs
+  Second - Display search results, able to edit search, save gifs,
+            navigate to saved gif page
+  Third - Explore, list of categories 20-30 gifs per category, save gifs,
+            navigate to first page and saved gif page
+  Fourth - Display of saved gifs, a way to remove gifs,
+            navigate to other pages.
