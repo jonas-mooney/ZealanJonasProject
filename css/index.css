@@ -1,16 +1,28 @@
 #searchBar {
   background-color: #C4C4C4;
   border-radius: 100px;
+  height: 50px;
+  display: flex;
 }
 #searchBar #searchInput {
-  height: inherit;
+  font-size: 1.5em;
   border-radius: 100px;
   background: #C4C4C4;
+  padding: 0 15px;
   border: none;
+  width: max-content;
+
 }
 #searchBar #searchButton {
+  width: 50px;
   background-color: #36157A;
   border-radius: 100px;
+}
+
+#gifContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #645683;
 }
 
 * {
@@ -23,3 +35,5 @@ body {
   height: 100vh;
   width: 100vw;
 }
+
+/*# sourceMappingURL=index.css.map */
