@@ -5,6 +5,9 @@ $yellow: #D8DC19;
 $green: #229418;
 $red: #A51E1E;
 
+@use 'header';
+@use 'trending';
+
 * {
   margin: 0;
   padding: 0;
