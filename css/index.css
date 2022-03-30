@@ -1,7 +1,18 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Error: There is no module with the namespace "v".
+ *   ,
+ * 6 |     background-color: v.$white;
+ *   |                       ^^^^^^^^
+ *   '
+ *   scss/_header.scss 6:23  @use
+ *   scss/index.scss 4:1     root stylesheet */
 
-/*# sourceMappingURL=index.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: There is no module with the namespace "v".\a   \2577 \a 6 \2502      background-color: v.$white;\a   \2502                        ^^^^^^^^\a   \2575 \a   scss/_header.scss 6:23  @use\a   scss/index.scss 4:1     root stylesheet';
+}

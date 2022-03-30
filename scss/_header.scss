@@ -1,0 +1,10 @@
+@use 'vars' as vars;
+
+
+
+#searchBar {
+    background-color: v.$white;
+    #searchButton {
+        background-color: v.$base-purple;
+    }
+}
