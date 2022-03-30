@@ -1,6 +1,6 @@
 
 
-@use 'vars';
+@use 'vars' as vars;
 @use 'header';
 @use 'trending';
 
@@ -11,4 +11,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
 }
