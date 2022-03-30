@@ -1,10 +1,12 @@
 #searchBar {
-  background-color: #FFF;
+  background-color: #C4C4C4;
   border-radius: 100px;
 }
 #searchBar #searchInput {
+  height: inherit;
   border-radius: 100px;
-  background-color: red;
+  background: #C4C4C4;
+  border: none;
 }
 #searchBar #searchButton {
   background-color: #36157A;
@@ -22,3 +24,4 @@ body {
   width: 100vw;
 }
 
+/*# sourceMappingURL=index.css.map */
