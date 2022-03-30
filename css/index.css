@@ -18,6 +18,12 @@
   border-radius: 100px;
 }
 
+#gifContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #645683;
+}
+
 * {
   margin: 0;
   padding: 0;
