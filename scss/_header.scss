@@ -3,8 +3,14 @@
 
 
 #searchBar {
-    background-color: v.$white;
+    background-color: vars.$white;
+    border-radius: 100px;
+    #searchInput {
+        border-radius: 100px;
+        background-color: red;
+    }
     #searchButton {
-        background-color: v.$base-purple;
+        background-color: vars.$base-purple;
+        border-radius: 100px;
     }
 }
