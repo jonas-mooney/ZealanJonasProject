@@ -5,9 +5,13 @@
 #searchBar {
     background-color: vars.$white;
     border-radius: 100px;
+    // height: ;
     #searchInput {
+        height: inherit;
         border-radius: 100px;
-        background-color: red;
+        background: vars.$white;
+        // padding: 0 5px;
+        border: none;
     }
     #searchButton {
         background-color: vars.$base-purple;
