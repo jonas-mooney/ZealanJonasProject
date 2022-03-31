@@ -73,10 +73,33 @@ body #nav #searchBar #searchButton:hover {
   background-color: #645683;
 }
 
-#gifContainer {
+#content {
   width: 100vw;
   height: 100vh;
   background-color: #645683;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#content #contentHeader {
+  color: white;
+  font-size: 40px;
+  width: 60vw;
+  text-align: center;
+}
+#content #gifContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-count: 4;
+}
+#content #gifContainer img {
+  width: auto;
+  height: 15em;
+  margin: 0.5em;
+}
+#content #gifContainer img:hover {
+  display: block;
 }
 
 * {

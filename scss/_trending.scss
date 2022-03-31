@@ -5,8 +5,38 @@ $yellow: #D8DC19;
 $green: #229418;
 $red: #A51E1E;
 
-#gifContainer {
+
+#content {
   width: 100vw;
   height: 100vh;
   background-color: $light-purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // column-count: 5;
+  
+  #contentHeader {
+    color: white;
+    font-size: 40px;
+    width: 60vw;
+    text-align: center;
+  }
+
+  #gifContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-count: 4;
+
+  
+    img {
+      $img-size: 15em;
+      width: auto;
+      height: $img-size;
+      margin: .5em;
+      &:hover {
+        display: block;
+      }
+    }
+  }
 }
