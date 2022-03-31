@@ -9,8 +9,21 @@ $red: #A51E1E;
   width: 100vw;
   height: 100vh;
   background-color: $light-purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  column-count: 5;
+
 
   h1 {
     color: white;
+    font-size: 80px;
+    width: 60vw;
+    text-align: center;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
   }
 }

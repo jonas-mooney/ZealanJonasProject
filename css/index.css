@@ -4,7 +4,6 @@
   height: 50px;
   display: flex;
   border: 4px #C4C4C4 solid;
-
 }
 #searchBar #searchInput {
   font-size: 1.5em;
@@ -27,12 +26,20 @@
   width: 100vw;
   height: 100vh;
   background-color: #645683;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  column-count: 5;
 }
-
-#gifContainer {
-  width: 100vw;
-  height: 100vh;
-  background-color: #645683;
+#gifContainer h1 {
+  color: white;
+  font-size: 80px;
+  width: 60vw;
+  text-align: center;
+}
+#gifContainer img {
+  width: 50px;
+  height: 50px;
 }
 
 * {
