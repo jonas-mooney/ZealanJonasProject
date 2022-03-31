@@ -1,31 +1,75 @@
-#searchBar {
+body {
+  background-color: #645683;
+}
+body #nav {
+  background-color: #36157A;
+  padding-bottom: 20px;
+}
+body #nav #topNav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 40px;
+  padding-top: 20px;
+}
+body #nav #topNav .logo {
+  font-size: 3em;
+  cursor: pointer;
+}
+body #nav #topNav #topButtons {
+  display: flex;
+  align-items: center;
+}
+body #nav #topNav #topButtons .topButton {
+  display: flex;
+  text-decoration: none;
+  padding: 0 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  height: 50px;
+  margin-right: 1vw;
+}
+body #nav #topNav #topButtons .topButton p {
+  font-size: 2em;
+  color: black;
+}
+body #nav #topNav #topButtons #trendingButton {
+  background-color: #D8DC19;
+}
+body #nav #topNav #topButtons #favoritesButton {
+  background-color: #229418;
+}
+body #nav #topNav #topButtons #loginButton {
+  margin-right: 0;
+  background-color: #A51E1E;
+}
+body #nav #searchBar {
   background-color: #C4C4C4;
   border-radius: 100px;
   height: 50px;
   display: flex;
-  border: 4px #C4C4C4 solid;
-
+  margin: 30px 40px;
 }
-#searchBar #searchInput {
+body #nav #searchBar #searchInput {
   font-size: 1.5em;
   border-radius: 100px;
-  background: #C4C4C4;
   padding: 0 0 0 15px;
   border: none;
   flex-grow: 2;
   outline: none;
+  background-color: transparent;
 }
-#searchBar #searchButton {
+body #nav #searchBar #searchButton {
+  align-self: center;
+  margin-right: 4px;
   width: 42px;
   height: 42px;
   background-color: #36157A;
   border-radius: 100px;
   border: none;
+  cursor: pointer;
 }
-
-#gifContainer {
-  width: 100vw;
-  height: 100vh;
+body #nav #searchBar #searchButton:hover {
   background-color: #645683;
 }
 
