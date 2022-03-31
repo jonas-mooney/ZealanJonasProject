@@ -7,18 +7,23 @@
     border-radius: 100px;
     height: 50px;
     display: flex;
+    border: 4px vars.$white solid;
     #searchInput {
         font-size: 1.5em;
-        // height: inherit;
         border-radius: 100px;
         background: vars.$white;
-        padding: 0 15px;
+        padding: 0 0 0 15px;
         border: none;
-        width: max-content;
+        flex-grow: 2;
+        // width: 
+        outline: none;
     }
     #searchButton {
-        width: 50px;
+        $diameter: 42px;
+        width: $diameter;
+        height: $diameter;
         background-color: vars.$base-purple;
         border-radius: 100px;
+        border: none;
     }
 }
