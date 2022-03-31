@@ -1,29 +1,81 @@
 @use 'vars' as vars;
 
-
-
-#searchBar {
-    background-color: vars.$white;
-    border-radius: 100px;
-    height: 50px;
-    display: flex;
-    border: 4px vars.$white solid;
-    #searchInput {
-        font-size: 1.5em;
-        border-radius: 100px;
-        background: vars.$white;
-        padding: 0 0 0 15px;
-        border: none;
-        flex-grow: 2;
-        // width: 
-        outline: none;
-    }
-    #searchButton {
-        $diameter: 42px;
-        width: $diameter;
-        height: $diameter;
+body {
+    background-color: vars.$light-purple;
+    #nav {
         background-color: vars.$base-purple;
-        border-radius: 100px;
-        border: none;
+        #topNav {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 40px;
+            padding-top: 20px;
+    
+            .logo {
+                font-size: 3em;
+                cursor: pointer;
+            }
+            #topButtons {
+                display: flex;
+                align-items: center;
+                .topButton {
+                    display: flex;
+                    text-decoration: none;
+                    padding: 0 16px;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 100px;
+                    height: 50px;
+                    margin-right: 1vw;
+                    p {
+                        font-size: 2em;
+                        color: black;
+                    }
+                }
+                #trendingButton {
+                    background-color: vars.$yellow;
+                }
+                #favoritesButton {
+                    background-color: vars.$green;
+                }
+                #loginButton {
+                    margin-right: 0;
+                    background-color: vars.$red;
+                }
+            }
+        }
+        #searchBar {
+            background-color: vars.$white;
+            border-radius: 100px;
+            height: 50px;
+            display: flex;
+            margin: 30px 40px;
+            // border: 4px vars.$white solid;
+            #searchInput {
+                font-size: 1.5em;
+                border-radius: 100px;
+                padding: 0 0 0 15px;
+                border: none;
+                flex-grow: 2;
+                outline: none;
+                background-color: transparent;
+            }
+            #searchButton {
+                align-self: center;
+                $diameter: 42px;
+                margin-right: 4px;
+                width: $diameter;
+                height: $diameter;
+                background-color: vars.$base-purple;
+                border-radius: 100px;
+                border: none;
+                cursor: pointer;
+                &:hover {
+                    background-color: vars.$light-purple;
+                }
+            }
+            // margin-bottom: 200px;
+            
+        }
+        padding-bottom: 20px;
     }
 }
