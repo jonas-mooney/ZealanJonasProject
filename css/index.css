@@ -4,6 +4,7 @@
   height: 50px;
   display: flex;
   border: 4px #C4C4C4 solid;
+
 }
 #searchBar #searchInput {
   font-size: 1.5em;
@@ -20,6 +21,12 @@
   background-color: #36157A;
   border-radius: 100px;
   border: none;
+}
+
+#gifContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #645683;
 }
 
 #gifContainer {
