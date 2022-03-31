@@ -3,19 +3,30 @@
   border-radius: 100px;
   height: 50px;
   display: flex;
+  border: 4px #C4C4C4 solid;
+
 }
 #searchBar #searchInput {
   font-size: 1.5em;
   border-radius: 100px;
   background: #C4C4C4;
-  padding: 0 15px;
+  padding: 0 0 0 15px;
   border: none;
-  width: max-content;
+  flex-grow: 2;
+  outline: none;
 }
 #searchBar #searchButton {
-  width: 50px;
+  width: 42px;
+  height: 42px;
   background-color: #36157A;
   border-radius: 100px;
+  border: none;
+}
+
+#gifContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #645683;
 }
 
 #gifContainer {
