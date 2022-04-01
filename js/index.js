@@ -36,8 +36,11 @@ function trendingGifs() {
   document.querySelector('#searchButton').addEventListener('click', ev => {
     ev.preventDefault();
     let url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=${limit}&q=`;
-    let str = document.querySelector('#searchInput').value.trim();
-    url = url.concat(str);
+    let str = document.querySelector('#searchInput').value;
+    str = encodeURI(str)
+    
+    url = url.concat(encodeURI(str));
+    console.log(url)
     gifContainer.innerHTML = null;
     contentHeader.innerHTML = `<h1>${document.querySelector('#searchInput').value}</h1>`;
 
