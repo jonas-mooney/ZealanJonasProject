@@ -8,24 +8,29 @@
   <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
-  <div class="nav">
-    <div id="logo"></div>
-    <div id="topButtons">
-      <a href="#" class="topButton" id="trendingButton">T</a>
-      <a href="#" class="topButton" id="favoritesButton">F</a>
-      <a href="#" class="topButton" id="loginButton">Log in</a>
+  <div id="nav">
+    <div id="topNav">
+      <div class="logo">ZJGifs</div>
+      <div id="topButtons">
+        <a href="#" class="topButton" id="trendingButton"><p>T</p></a>
+        <a href="#" class="topButton" id="favoritesButton"><p>F</p></a>
+        <a href="#" class="topButton" id="loginButton"><p>Login</p></a>
+      </div>
     </div>
     <div id="searchBar">
       <input id="searchInput" type="text" placeholder="Search for any Gifs!">
       <button id="searchButton">🔎</button>
     </div>
-    <div></div>
-    <div></div>
-    <div></div>
   </div>
-  <div id="gifContainer" class="gifContainer container"></div>
+  <div id="content">
+    <h1 id="contentHeader"></h1>
+    <div id="gifContainer" class="gifContainer container"></div>
+  </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  
+  <script type="module" src="js/favorites.mjs"></script>
+  <script type="module" src="js/header.mjs"></script>
+  <script type="module" src="js/trending.mjs"></script>
   <script type="text/Javascript" src="js/index.js"></script>
-
 </body>
 </html>
