@@ -33,7 +33,10 @@ body {
                     }
                 }
                 #trendingButton {
-                    background-color: vars.$yellow;
+                    background-color: vars.$light;
+                    img {
+                        width: 3em;
+                    }
                 }
                 #favoritesButton {
                     background-color: vars.$green;

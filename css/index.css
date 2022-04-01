@@ -35,7 +35,10 @@ body #nav #topNav #topButtons .topButton p {
   color: black;
 }
 body #nav #topNav #topButtons #trendingButton {
-  background-color: #D8DC19;
+  background-color: #434f8d;
+}
+body #nav #topNav #topButtons #trendingButton img {
+  width: 3em;
 }
 body #nav #topNav #topButtons #favoritesButton {
   background-color: #229418;
