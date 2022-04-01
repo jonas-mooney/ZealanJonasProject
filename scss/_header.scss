@@ -1,9 +1,9 @@
 @use 'vars' as vars;
 
 body {
-    background-color: vars.$light-purple;
+    background-color: vars.$dark;
     #nav {
-        background-color: vars.$base-purple;
+        background-color: vars.$light;
         #topNav {
             display: flex;
             justify-content: space-between;
@@ -13,6 +13,7 @@ body {
             .logo {
                 font-size: 3em;
                 cursor: pointer;
+                color: white;
             }
             #topButtons {
                 display: flex;

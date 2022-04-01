@@ -1,8 +1,8 @@
 body {
-  background-color: #645683;
+  background-color: #151F25;
 }
 body #nav {
-  background-color: #36157A;
+  background-color: #434f8d;
   padding-bottom: 20px;
 }
 body #nav #topNav {
@@ -14,6 +14,7 @@ body #nav #topNav {
 body #nav #topNav .logo {
   font-size: 3em;
   cursor: pointer;
+  color: white;
 }
 body #nav #topNav #topButtons {
   display: flex;
@@ -44,7 +45,7 @@ body #nav #topNav #topButtons #loginButton {
   background-color: #A51E1E;
 }
 body #nav #searchBar {
-  background-color: #C4C4C4;
+  background-color: #FFF;
   border-radius: 100px;
   height: 50px;
   display: flex;
@@ -76,7 +77,7 @@ body #nav #searchBar #searchButton:hover {
 #content {
   width: 100vw;
   height: 100vh;
-  background-color: #645683;
+  background-color: #151F25;
   display: flex;
   flex-direction: column;
   align-items: center;
