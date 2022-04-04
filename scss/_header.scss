@@ -33,17 +33,22 @@ body {
                     }
                 }
                 #trendingButton {
-                    background-color: vars.$light;
                     img {
                         width: 3em;
                     }
                 }
                 #favoritesButton {
-                    background-color: vars.$green;
+                    img {
+                        width: 3em;
+                    }
                 }
                 #loginButton {
-                    margin-right: 0;
-                    background-color: vars.$red;
+                    margin-right: -12px;
+                    img {
+                        width: 3em;
+                        border: 1px solid rgb(50, 64, 134);
+                        border-radius: 100vw;
+                    }
                 }
             }
         }
