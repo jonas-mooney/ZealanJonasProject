@@ -14,6 +14,9 @@ body {
                 font-size: 3em;
                 cursor: pointer;
                 color: white;
+                img {
+                    width: 9em;
+                }
             }
             #topButtons {
                 display: flex;
