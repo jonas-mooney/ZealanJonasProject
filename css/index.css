@@ -16,6 +16,9 @@ body #nav #topNav .logo {
   cursor: pointer;
   color: white;
 }
+body #nav #topNav .logo img {
+  width: 9em;
+}
 body #nav #topNav #topButtons {
   display: flex;
   align-items: center;
