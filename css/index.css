@@ -96,18 +96,29 @@ body #nav #searchBar #searchButton:hover {
   text-align: center;
 }
 #content #gifContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  column-count: 4;
+  column-count: 5;
+  margin: 0 2em;
+}
+@media (max-width: 1200px) {
+  #content #gifContainer {
+    column-count: 4;
+  }
+}
+@media (max-width: 1000px) {
+  #content #gifContainer {
+    column-count: 3;
+  }
+}
+@media (max-width: 800px) {
+  #content #gifContainer {
+    column-count: 2;
+  }
 }
 #content #gifContainer img {
-  width: auto;
-  height: 15em;
-  margin: 0.5em;
-}
-#content #gifContainer img:hover {
-  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  border-radius: 10px;
 }
 
 * {
