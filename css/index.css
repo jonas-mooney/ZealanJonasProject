@@ -114,7 +114,21 @@ body #nav #searchBar #searchButton:hover {
     column-count: 2;
   }
 }
-#content #gifContainer img {
+#content #gifContainer .gifDiv {
+  position: relative;
+}
+#content #gifContainer .gifDiv .iconImage {
+  position: absolute;
+  display: none;
+  bottom: 28px;
+  left: 15px;
+  z-index: 123;
+  height: 2em;
+}
+#content #gifContainer .gifDiv:hover .iconImage {
+  display: block;
+}
+#content #gifContainer .gifDiv .mainImage {
   width: 100%;
   height: auto;
   margin-bottom: 5px;
