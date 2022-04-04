@@ -25,12 +25,10 @@ function trendingGifs() {
 
     function render(data) {
       for (let i=0; i<=data.length; i++) {
-        gifContainer.innerHTML += `<div class='gifDiv'><img class='mainImage' src='${data[i].images.downsized.url}'><img class='iconImage' src='./images/hollowHeart.png'></div>`
+        gifContainer.innerHTML += `<div id='${data[i].id}' class='gifDiv'><img class='mainImage' src='${data[i].images.downsized.url}'><img class='iconImage' onclick='addToFavs(${data[i].id})' src='./images/hollowHeart.png'></div>`
       }
     }
 }
- 
-
 
 
   document.querySelector('#searchButton').addEventListener('click', ev => {
@@ -61,3 +59,10 @@ function trendingGifs() {
     }
   })
 
+
+function addToFavs(id) {
+const container = document.getElementById(id.id);
+$(container).children('.iconImage')[0] = `<img class='iconImage' onclick='removeToFavs(${data[i].id})' src='./images/fullHeart.png'>`;
+// change icon to full red heart
+// Gif id to local storage
+}
