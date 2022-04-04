@@ -34,18 +34,19 @@ body #nav #topNav #topButtons .topButton p {
   font-size: 2em;
   color: black;
 }
-body #nav #topNav #topButtons #trendingButton {
-  background-color: #434f8d;
-}
 body #nav #topNav #topButtons #trendingButton img {
   width: 3em;
 }
-body #nav #topNav #topButtons #favoritesButton {
-  background-color: #229418;
+body #nav #topNav #topButtons #favoritesButton img {
+  width: 3em;
 }
 body #nav #topNav #topButtons #loginButton {
-  margin-right: 0;
-  background-color: #A51E1E;
+  margin-right: -12px;
+}
+body #nav #topNav #topButtons #loginButton img {
+  width: 3em;
+  border: 1px solid #324086;
+  border-radius: 100vw;
 }
 body #nav #searchBar {
   background-color: #FFF;
