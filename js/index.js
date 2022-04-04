@@ -25,7 +25,7 @@ function trendingGifs() {
 
     function render(data) {
       for (let i=0; i<=data.length; i++) {
-        gifContainer.innerHTML += `<img src='${data[i].images.downsized.url}'></img>`
+        gifContainer.innerHTML += `<div class='gifDiv'><img class='mainImage' src='${data[i].images.downsized.url}'><img class='iconImage' src='./images/hollowHeart.png'></div>`
       }
     }
 }
@@ -61,5 +61,3 @@ function trendingGifs() {
     }
   })
 
-
-  // Our latest test

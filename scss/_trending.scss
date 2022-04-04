@@ -51,14 +51,33 @@
        column-count:         2;
     }
 
-  
-    img {
-      $img-size: 15em;
-      width: 100%;
-      height: auto;
-      margin-bottom: 5px;
-      border-radius: 10px;
+    .gifDiv {
+      position: relative;
+      
+      .iconImage {
+        position: absolute;
+        display: none;
+        bottom: 28px;
+        left: 15px;
+        z-index: 123;
+        height: 2em;
+      }
+
+      &:hover {
+        .iconImage {
+          display: block;
+        }
+      }
+      .mainImage {
+        $img-size: 15em;
+        width: 100%;
+        height: auto;
+        margin-bottom: 5px;
+        border-radius: 10px;
+      }
     }
+
+
   }
 
 
