@@ -12,9 +12,10 @@
   
   #contentHeader {
     color: white;
-    font-size: 40px;
-    width: 60vw;
+    font-size: 4em;
+    // width: 60vw;
     text-align: center;
+    margin: 50px 0 50px 0
   }
 
   // #gifContainer {
@@ -37,7 +38,7 @@
 
   #gifContainer {
     column-count: 5;
-    margin: 0 2em;
+    margin: 10px 2em 0 2em;
 
     @media (max-width: 1200px) {
       column-count: 4;
@@ -58,6 +59,7 @@
         left: 15px;
         z-index: 123;
         height: 2em;
+        cursor: pointer;
       }
 
       &:hover {

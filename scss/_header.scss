@@ -11,11 +11,17 @@ body {
             padding-top: 20px;
     
             .logo {
-                font-size: 3em;
+                display: flex;
+                font-size: 1.5em;
                 cursor: pointer;
-                color: white;
+                color: vars.$white;
+                align-items: center;
                 img {
-                    width: 9em;
+                    height: 1em;
+                    border-right: solid vars.$white;
+                }
+                .logoText {
+
                 }
             }
             #topButtons {
