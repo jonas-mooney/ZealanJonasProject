@@ -137,6 +137,11 @@ body #nav #searchBar #searchButton:hover {
   position: relative;
   border-radius: 10px;
 }
+#content #gifContainer .gifDiv .mainImage {
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+}
 #content #gifContainer .gifDiv .iconImage {
   position: absolute;
   display: none;
@@ -148,11 +153,6 @@ body #nav #searchBar #searchButton:hover {
 }
 #content #gifContainer .gifDiv:hover .iconImage {
   display: block;
-}
-#content #gifContainer .gifDiv .mainImage {
-  width: 100%;
-  height: auto;
-  border-radius: inherit;
 }
 
 * {
