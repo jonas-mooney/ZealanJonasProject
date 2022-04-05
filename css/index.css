@@ -10,17 +10,23 @@ body #nav #topNav {
   justify-content: space-between;
   margin: 0 40px;
   padding-top: 20px;
+  flex-wrap: wrap;
 }
 body #nav #topNav .logo {
   display: flex;
-  font-size: 1.5em;
   cursor: pointer;
   color: #FFF;
   align-items: center;
 }
 body #nav #topNav .logo img {
-  height: 1em;
-  border-right: solid #FFF;
+  height: 3em;
+  border-right: solid #FFF 2px;
+  padding-right: 20px;
+  margin-right: 20px;
+}
+body #nav #topNav .logo .logoText {
+  font-size: 3em;
+  font-family: "Gemunu Libre", sans-serif;
 }
 body #nav #topNav #topButtons {
   display: flex;
@@ -29,25 +35,26 @@ body #nav #topNav #topButtons {
 body #nav #topNav #topButtons .topButton {
   display: flex;
   text-decoration: none;
-  padding: 0 16px;
   justify-content: center;
   align-items: center;
   border-radius: 100px;
   height: 50px;
-  margin-right: 1vw;
 }
 body #nav #topNav #topButtons .topButton p {
   font-size: 2em;
   color: black;
 }
+body #nav #topNav #topButtons #trendingButton {
+  margin-right: 2vw;
+}
 body #nav #topNav #topButtons #trendingButton img {
   width: 3em;
 }
+body #nav #topNav #topButtons #favoritesButton {
+  margin-right: 2vw;
+}
 body #nav #topNav #topButtons #favoritesButton img {
   width: 3em;
-}
-body #nav #topNav #topButtons #loginButton {
-  margin-right: -12px;
 }
 body #nav #topNav #topButtons #loginButton img {
   width: 3em;
@@ -75,13 +82,13 @@ body #nav #searchBar #searchButton {
   margin-right: 4px;
   width: 42px;
   height: 42px;
-  background-color: #36157A;
+  background-color: #434f8d;
   border-radius: 100px;
   border: none;
   cursor: pointer;
 }
 body #nav #searchBar #searchButton:hover {
-  background-color: #645683;
+  background-color: #151F25;
 }
 
 #content {
@@ -97,10 +104,13 @@ body #nav #searchBar #searchButton:hover {
   font-size: 4em;
   text-align: center;
   margin: 50px 0 50px 0;
+  font-family: "Gemunu Libre", sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 #content #gifContainer {
   column-count: 5;
   margin: 10px 2em 0 2em;
+  padding-bottom: 100px;
 }
 @media (max-width: 1200px) {
   #content #gifContainer {
