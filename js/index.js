@@ -1,5 +1,6 @@
 const limit = 30;
 const apiKey = 'KkQIVU7CgUTlND28O2bDZveA3Z8Vl1kz';
+const favorites = []
 
 document.addEventListener('DOMContentLoaded', trendingGifs);
 const contentContainer = document.querySelector('#content');
@@ -11,7 +12,7 @@ document.querySelector('#trendingButton').addEventListener('click', trendingGifs
 function trendingGifs() {
   gifContainer.innerHTML = null;
     let url = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=${limit}`
-    contentHeader.innerHTML = `<h1>Search and Save your Favorite Gifs</h1>`;
+    contentHeader.innerText = "Search and Save your Favorite Gifs";
 
     fetch(url)
     .then(response => response.json())
@@ -26,21 +27,29 @@ function trendingGifs() {
     function render(data) {
       for (let i=0; i<=data.length; i++) {
         gifContainer.innerHTML += `<div id='${data[i].id}' class='gifDiv'><img class='mainImage' src='${data[i].images.downsized.url}'><img class='iconImage' onclick='addToFavs(${data[i].id})' src='./images/hollowHeart.png'></div>`
+
       }
     }
 }
 
 
+
+$('#searchBar').keypress(event => {
+  if(event.keyCode == 13) {
+    $('#searchButton').click()
+  }
+});
+
   document.querySelector('#searchButton').addEventListener('click', ev => {
     ev.preventDefault();
     let url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=${limit}&q=`;
     let str = document.querySelector('#searchInput').value;
-    str = encodeURI(str)
     
     url = url.concat(encodeURI(str));
+    console.log(str)
     console.log(url)
     gifContainer.innerHTML = null;
-    contentHeader.innerHTML = `<h1>${document.querySelector('#searchInput').value}</h1>`;
+    contentHeader.innerText = str;
 
     fetch(url)
     .then(response => response.json())
@@ -54,15 +63,17 @@ function trendingGifs() {
 
     function render(data) {
       for (let i in data) {
-        gifContainer.innerHTML += `<img src='${data[i].images.downsized.url}'></img>`
+        gifContainer.innerHTML += `<div id='${data[i].id}' class='gifDiv'><img class='mainImage' src='${data[i].images.downsized.url}'><img class='iconImage' onclick='addToFavs(${data[i].id})' src='./images/hollowHeart.png'></div>`
       }
     }
   })
 
 
 function addToFavs(id) {
-const container = document.getElementById(id.id);
-$(container).children('.iconImage')[0] = `<img class='iconImage' onclick='removeToFavs(${data[i].id})' src='./images/fullHeart.png'>`;
-// change icon to full red heart
-// Gif id to local storage
+  console.log(id)
+  const container = document.getElementById(id.id);
+  console.log(container)
+  // $(container).children('.iconImage')[0] = `<img class='iconImage' onclick='removeToFavs(${data[i].id})' src='./images/fullHeart.png'>`;
+  // change icon to full red heart
+  // Gif id to local storage
 }

@@ -9,47 +9,60 @@ body {
             justify-content: space-between;
             margin: 0 40px;
             padding-top: 20px;
-    
+            flex-wrap: wrap;
             .logo {
-                font-size: 3em;
+                display: flex;
                 cursor: pointer;
-                color: white;
+                color: vars.$white;
+                align-items: center;
                 img {
-                    width: 9em;
+                    height: 3em;
+                    border-right: solid vars.$white 2px;
+                    $space: 20px;
+                    padding-right: $space; 
+                    margin-right: $space;
+                }
+                .logoText {
+                    font-size: 3em;
+                    // font-family: 'Rubik', sans-serif;
+                    font-family: 'Gemunu Libre', sans-serif;
+                    letter-spacing: .05em;
                 }
             }
             #topButtons {
                 display: flex;
                 align-items: center;
+                $buttonSpacing: 2vw;
+                $buttonSize: 3em;
                 .topButton {
                     display: flex;
                     text-decoration: none;
-                    padding: 0 16px;
                     justify-content: center;
                     align-items: center;
                     border-radius: 100px;
                     height: 50px;
-                    margin-right: 1vw;
+
                     p {
                         font-size: 2em;
                         color: black;
                     }
                 }
                 #trendingButton {
+                    margin-right: $buttonSpacing;
                     img {
-                        width: 3em;
+                        width: $buttonSize;
                     }
                 }
                 #favoritesButton {
+                    margin-right: $buttonSpacing;
                     img {
-                        width: 3em;
+                        width: $buttonSize;
                     }
                 }
                 #loginButton {
-                    margin-right: -12px;
                     img {
-                        width: 3em;
-                        border: 1px solid rgb(50, 64, 134);
+                        width: $buttonSize;
+                        // border: 1px solid rgb(50, 64, 134);
                         border-radius: 100vw;
                     }
                 }
@@ -61,7 +74,6 @@ body {
             height: 50px;
             display: flex;
             margin: 30px 40px;
-            // border: 4px vars.$white solid;
             #searchInput {
                 font-size: 1.5em;
                 border-radius: 100px;
@@ -70,6 +82,7 @@ body {
                 flex-grow: 2;
                 outline: none;
                 background-color: transparent;
+                font-family: 'Rubik', sans-serif;
             }
             #searchButton {
                 align-self: center;
@@ -77,16 +90,15 @@ body {
                 margin-right: 4px;
                 width: $diameter;
                 height: $diameter;
-                background-color: vars.$base-purple;
+                background-color: vars.$light;
                 border-radius: 100px;
                 border: none;
                 cursor: pointer;
+                padding: 5px;
                 &:hover {
-                    background-color: vars.$light-purple;
+                    background-color: vars.$dark;
                 }
             }
-            // margin-bottom: 200px;
-            
         }
         padding-bottom: 20px;
     }

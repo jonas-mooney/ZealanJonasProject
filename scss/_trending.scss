@@ -12,9 +12,11 @@
   
   #contentHeader {
     color: white;
-    font-size: 40px;
-    width: 60vw;
+    font-size: 4em;
+    // width: 60vw;
     text-align: center;
+    margin: 50px 0 50px 0;
+    font-family: 'Rubik', sans-serif;
   }
 
   // #gifContainer {
@@ -36,24 +38,26 @@
 
 
   #gifContainer {
-    column-count: 5;
-    margin: 0 2em;
+    column-count: 6;
+    margin: 10px 2em 0 2em;
+    padding-bottom: 100px;
 
+    @media (max-width: 1500px) {
+      column-count: 5;
+    }
     @media (max-width: 1200px) {
-       column-count:         4;
+      column-count: 4;
     }
-    
     @media (max-width: 1000px) {
-       column-count:         3;
+      column-count: 3;
     }
-    
     @media (max-width: 800px) {
-       column-count:         2;
+      column-count: 2;
     }
 
     .gifDiv {
       position: relative;
-      
+      border-radius: 10px;
       .iconImage {
         position: absolute;
         display: none;
@@ -61,6 +65,7 @@
         left: 15px;
         z-index: 123;
         height: 2em;
+        cursor: pointer;
       }
 
       &:hover {
@@ -72,13 +77,9 @@
         $img-size: 15em;
         width: 100%;
         height: auto;
-        margin-bottom: 5px;
-        border-radius: 10px;
+        border-radius: inherit;
+
       }
     }
-
-
   }
-
-
 }
