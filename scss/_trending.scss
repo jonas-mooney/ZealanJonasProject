@@ -40,20 +40,17 @@
     margin: 0 2em;
 
     @media (max-width: 1200px) {
-       column-count:         4;
+      column-count: 4;
     }
-    
     @media (max-width: 1000px) {
-       column-count:         3;
+      column-count: 3;
     }
-    
     @media (max-width: 800px) {
-       column-count:         2;
+      column-count: 2;
     }
 
     .gifDiv {
       position: relative;
-      
       .iconImage {
         position: absolute;
         display: none;
@@ -76,9 +73,5 @@
         border-radius: 10px;
       }
     }
-
-
   }
-
-
 }

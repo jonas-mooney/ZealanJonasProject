@@ -32,17 +32,22 @@ function trendingGifs() {
  
 
 
+$('#searchBar').keypress(function(event){
+  if(event.keyCode == '13'){
+    $('#searchButton').click()
+  }
+});
 
   document.querySelector('#searchButton').addEventListener('click', ev => {
     ev.preventDefault();
     let url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=${limit}&q=`;
     let str = document.querySelector('#searchInput').value;
-    str = encodeURI(str)
     
     url = url.concat(encodeURI(str));
+    console.log(str)
     console.log(url)
     gifContainer.innerHTML = null;
-    contentHeader.innerHTML = `<h1>${document.querySelector('#searchInput').value}</h1>`;
+    contentHeader.innerHTML = `<h1>${str}</h1>`;
 
     fetch(url)
     .then(response => response.json())
@@ -56,7 +61,7 @@ function trendingGifs() {
 
     function render(data) {
       for (let i in data) {
-        gifContainer.innerHTML += `<img src='${data[i].images.downsized.url}'></img>`
+        gifContainer.innerHTML += `<div class='gifDiv'><img class='mainImage' src='${data[i].images.downsized.url}'><img class='iconImage' src='./images/hollowHeart.png'></div>`
       }
     }
   })
