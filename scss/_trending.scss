@@ -16,9 +16,7 @@
     // width: 60vw;
     text-align: center;
     margin: 50px 0 50px 0;
-    font-family: 'Gemunu Libre', sans-serif;
     font-family: 'Rubik', sans-serif;
-
   }
 
   // #gifContainer {
@@ -40,10 +38,13 @@
 
 
   #gifContainer {
-    column-count: 5;
+    column-count: 6;
     margin: 10px 2em 0 2em;
     padding-bottom: 100px;
 
+    @media (max-width: 1500px) {
+      column-count: 5;
+    }
     @media (max-width: 1200px) {
       column-count: 4;
     }
@@ -56,6 +57,7 @@
 
     .gifDiv {
       position: relative;
+      border-radius: 10px;
       .iconImage {
         position: absolute;
         display: none;
@@ -75,8 +77,8 @@
         $img-size: 15em;
         width: 100%;
         height: auto;
-        margin-bottom: 5px;
-        border-radius: 10px;
+        border-radius: inherit;
+
       }
     }
   }

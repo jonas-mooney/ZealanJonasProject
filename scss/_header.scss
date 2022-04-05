@@ -26,6 +26,7 @@ body {
                     font-size: 3em;
                     // font-family: 'Rubik', sans-serif;
                     font-family: 'Gemunu Libre', sans-serif;
+                    letter-spacing: .05em;
                 }
             }
             #topButtons {
@@ -59,10 +60,9 @@ body {
                     }
                 }
                 #loginButton {
-                    // margin-right: -12px;
                     img {
                         width: $buttonSize;
-                        border: 1px solid rgb(50, 64, 134);
+                        // border: 1px solid rgb(50, 64, 134);
                         border-radius: 100vw;
                     }
                 }
@@ -82,6 +82,7 @@ body {
                 flex-grow: 2;
                 outline: none;
                 background-color: transparent;
+                font-family: 'Rubik', sans-serif;
             }
             #searchButton {
                 align-self: center;
@@ -93,12 +94,11 @@ body {
                 border-radius: 100px;
                 border: none;
                 cursor: pointer;
+                padding: 5px;
                 &:hover {
                     background-color: vars.$dark;
                 }
             }
-            // margin-bottom: 200px;
-            
         }
         padding-bottom: 20px;
     }

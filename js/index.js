@@ -31,11 +31,11 @@ function trendingGifs() {
       }
     }
 }
- 
 
 
-$('#searchBar').keypress(function(event){
-  if(event.keyCode == '13'){
+
+$('#searchBar').keypress(event => {
+  if(event.keyCode == 13) {
     $('#searchButton').click()
   }
 });
