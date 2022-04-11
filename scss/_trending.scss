@@ -58,6 +58,12 @@
     .gifDiv {
       position: relative;
       border-radius: 10px;
+      .mainImage {
+        $img-size: 15em;
+        width: 100%;
+        height: auto;
+        border-radius: inherit;
+      }
       .iconImage {
         position: absolute;
         display: none;
@@ -67,18 +73,10 @@
         height: 2em;
         cursor: pointer;
       }
-
       &:hover {
         .iconImage {
           display: block;
         }
-      }
-      .mainImage {
-        $img-size: 15em;
-        width: 100%;
-        height: auto;
-        border-radius: inherit;
-
       }
     }
   }

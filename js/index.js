@@ -69,11 +69,19 @@ $('#searchBar').keypress(event => {
   })
 
 
-function addToFavs(id) {
-  console.log(id)
-  const container = document.getElementById(id.id);
+function addToFavs(container) {
   console.log(container)
-  // $(container).children('.iconImage')[0] = `<img class='iconImage' onclick='removeToFavs(${data[i].id})' src='./images/fullHeart.png'>`;
+  console.log(container.id)
+  favorites.push(container.id)
+  // $(container).children('.iconImage')[0] = `<img class='iconImage' onclick='removeToFavs(${container.id})' src='./images/fullHeart.png'>`;
+  $(container).children('.iconImage')[0].remove()
+  $(container).append(`<img class='iconImage' onclick='removeFromFavs(${container.id})' src='./images/fullHeart.png'>`)
+  //need to finish remove from favorites
+
   // change icon to full red heart
   // Gif id to local storage
+  console.log(favorites)
+}
+function removeFromFavs() {
+
 }
