@@ -2,6 +2,7 @@ const limit = 30;
 const apiKey = 'KkQIVU7CgUTlND28O2bDZveA3Z8Vl1kz';
 const key = 'favorites';
 let inTrending = false;
+let inFavorites = false
 
 
 document.addEventListener('DOMContentLoaded', trendingGifs);
@@ -12,6 +13,7 @@ const gifContainer = document.querySelector('#gifContainer');
 document.querySelector('#trendingButton').addEventListener('click', trendingGifs);
 
 function trendingGifs() {
+  inFavorites = false
   inTrending = true;
   gifContainer.innerHTML = null;
     let url = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=${limit}`
@@ -62,6 +64,7 @@ $('#searchBar').keypress(event => {
 });
 
   document.querySelector('#searchButton').addEventListener('click', ev => {
+    inFavorites = false
     inTrending = false
 
     ev.preventDefault();
@@ -95,10 +98,11 @@ document.querySelector('#favoritesButton').addEventListener('click', favoriteGif
 
 function favoriteGifs() {
   inTrending = false
+  inFavorites = true
+
   contentHeader.innerText = "Favorites";
   gifContainer.innerHTML = null;
   let storageFavorites = JSON.parse(localStorage.getItem(key));
-  // console.log(storageFavorites);
   for (let id in storageFavorites) {
     let url = `https://api.giphy.com/v1/gifs/${storageFavorites[id]}?api_key=${apiKey}`;
     fetch(url)
@@ -136,11 +140,13 @@ function removeFromFavs(containerId) {
   let store = JSON.parse(localStorage.getItem(key));
   let result = store.filter(id => id != containerId);
   localStorage.setItem(key, JSON.stringify(result));
-  if(!inTrending) {
-    favoriteGifs()
+  if(inFavorites) {
+    $(container).remove()
   }
-  $(container).children()[1].remove()
-  $(container).append(`<img class='iconImage' onclick='addToFavs("${containerId}")' src='./images/hollowHeart.png'>`)
+  else {
+    $(container).children()[1].remove()
+    $(container).append(`<img class='iconImage' onclick='addToFavs("${containerId}")' src='./images/hollowHeart.png'>`)
+  }
   removeDuplicates()
 }
 

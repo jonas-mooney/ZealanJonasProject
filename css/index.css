@@ -82,6 +82,7 @@ body #nav #searchBar #searchButton {
   align-self: center;
   margin-right: 4px;
   width: 42px;
+  min-width: 42px;
   height: 42px;
   background-color: #434f8d;
   border-radius: 100px;
@@ -152,6 +153,7 @@ body #nav #searchBar #searchButton:hover {
   cursor: pointer;
 }
 #content #gifContainer .gifDiv:hover .iconImage {
+  cursor: pointer;
   display: block;
 }
 
