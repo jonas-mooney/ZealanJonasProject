@@ -89,6 +89,7 @@ body {
                 $diameter: 42px;
                 margin-right: 4px;
                 width: $diameter;
+                min-width: $diameter;
                 height: $diameter;
                 background-color: vars.$light;
                 border-radius: 100px;
