@@ -55,22 +55,6 @@ function trendingGifs() {
       }
     }
 }
-// function render(data) {
-//   let x = JSON.parse(localStorage.getItem(key));
-//   for (let i=0; i<=data.length; i++) {
-//     let temp = false;
-//     for (let j=0; j<=x.length; j++) {
-//       temp = (data[i].id == x[j]);
-//       console.log(temp)
-//     }
-//     if (temp) {
-//       gifContainer.innerHTML += `<div id='${data[i].id}' class='gifDiv'><img class='mainImage' src='${data[i].images.downsized.url}'><img class='iconImage' onclick='addToFavs(${data[i].id})' src='./images/hollowHeart.png'></div>`
-//     }
-//     else {
-//       gifContainer.innerHTML += `<div id='${data[i].id}' class='gifDiv'><img class='mainImage' src='${data[i].images.downsized.url}'><img class='iconImage' onclick='removeFromFavs(${data[i].id})' src='./images/fullHeart.png'></div>`
-//     }
-//   }
-// }
 
 $('#searchBar').keypress(event => {
   if(event.keyCode == 13) {
