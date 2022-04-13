@@ -140,8 +140,13 @@ body .row .btn-facebook {
   color: white;
   font-size: 4em;
   text-align: center;
-  margin: 50px 0 50px 0;
+  margin: 50px 20px;
   font-family: "Rubik", sans-serif;
+}
+@media (max-width: 400px) {
+  #content #contentHeader {
+    font-size: 2em;
+  }
 }
 #content #gifContainer {
   column-count: 6;
@@ -182,7 +187,7 @@ body .row .btn-facebook {
 #content #gifContainer .gifDiv .iconImage {
   position: absolute;
   display: none;
-  bottom: 28px;
+  bottom: 15px;
   left: 15px;
   z-index: 123;
   height: 2em;
@@ -191,6 +196,11 @@ body .row .btn-facebook {
 #content #gifContainer .gifDiv:hover .iconImage {
   cursor: pointer;
   display: block;
+}
+@media (hover: none) {
+  #content #gifContainer .gifDiv .iconImage {
+    display: block;
+  }
 }
 
 * {

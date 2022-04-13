@@ -17,7 +17,7 @@ function trendingGifs() {
   inTrending = true;
   gifContainer.innerHTML = null;
     let url = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=${limit}`
-    contentHeader.innerText = "Search and Save your Favorite Gifs";
+    contentHeader.innerText = "Search and Save your Favorite Gifs!";
 
     fetch(url)
     .then(response => response.json())
@@ -28,11 +28,6 @@ function trendingGifs() {
       console.log(err)
     })
 
-    // function render(data) {
-    //   for (let i=0; i<=data.length; i++) {
-    //     gifContainer.innerHTML += `<div id='${data[i].id}' class='gifDiv'><img class='mainImage' src='${data[i].images.downsized.url}'><img class='iconImage' onclick='addToFavs("${data[i].id}"")' src='./images/hollowHeart.png'></div>`;
-    //   }
-    // }
     function render(data) {
       let x = JSON.parse(localStorage.getItem(key));
       if(x == null) {
@@ -69,6 +64,9 @@ $('#searchBar').keypress(event => {
     ev.preventDefault();
     let url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=${limit}&q=`;
     let str = document.querySelector('#searchInput').value;
+    if (!str) {
+      str = 'Unicorn';
+    }
     
     url = url.concat(encodeURI(str));
     console.log(str)
@@ -155,6 +153,4 @@ function removeDuplicates() {
   localStorage.setItem(key, JSON.stringify(store));
 }
 
-document.querySelector('#loginButton').addEventListener('click', ()=> {
-  
-});
+document.querySelector('#logo').addEventListener('click', trendingGifs);
