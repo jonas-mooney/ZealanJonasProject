@@ -154,3 +154,7 @@ function removeDuplicates() {
   store = [...new Set(store)];
   localStorage.setItem(key, JSON.stringify(store));
 }
+
+document.querySelector('#loginButton').addEventListener('click', ()=> {
+  
+});
