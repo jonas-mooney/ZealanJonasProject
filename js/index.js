@@ -56,7 +56,6 @@ function trendingGifs() {
     }
 }
 
-
 $('#searchBar').keypress(event => {
   if(event.keyCode == 13) {
     $('#searchButton').click()
@@ -155,3 +154,7 @@ function removeDuplicates() {
   store = [...new Set(store)];
   localStorage.setItem(key, JSON.stringify(store));
 }
+
+document.querySelector('#loginButton').addEventListener('click', ()=> {
+  
+});

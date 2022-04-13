@@ -19,24 +19,6 @@
     font-family: 'Rubik', sans-serif;
   }
 
-  // #gifContainer {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   justify-content: center;
-  //   column-count: 4;
-  
-  //   img {
-  //     $img-size: 15em;
-  //     width: auto;
-  //     height: $img-size;
-  //     margin: .5em;
-  //     &:hover {
-  //       display: block;
-  //     }
-  //   }
-  // }
-
-
   #gifContainer {
     column-count: 6;
     margin: 10px 2em 0 2em;
@@ -58,6 +40,8 @@
     .gifDiv {
       position: relative;
       border-radius: 10px;
+      margin-bottom: 10px;
+      margin-right: -5px;
       .mainImage {
         $img-size: 15em;
         width: 100%;

@@ -1,39 +1,53 @@
 body {
   background-color: #151F25;
 }
-body #nav {
+body #navigation {
   background-color: #434f8d;
   padding-bottom: 20px;
 }
-body #nav #topNav {
+body #navigation #topNav {
   display: flex;
   justify-content: space-between;
   margin: 0 40px;
   padding-top: 20px;
   flex-wrap: wrap;
 }
-body #nav #topNav .logo {
+@media (max-width: 463px) {
+  body #navigation #topNav {
+    justify-content: center;
+  }
+}
+body #navigation #topNav .logo {
   display: flex;
   cursor: pointer;
   color: #FFF;
   align-items: center;
+  max-height: 52.5px;
 }
-body #nav #topNav .logo img {
+@media (max-width: 463px) {
+  body #navigation #topNav .logo {
+    margin-bottom: 15px;
+  }
+}
+body #navigation #topNav .logo img {
   height: 3em;
   border-right: solid #FFF 2px;
   padding-right: 20px;
   margin-right: 20px;
 }
-body #nav #topNav .logo .logoText {
+body #navigation #topNav .logo .logoText {
   font-size: 3em;
+  margin: 0;
+  padding: 0;
   font-family: "Gemunu Libre", sans-serif;
   letter-spacing: 0.05em;
 }
-body #nav #topNav #topButtons {
+body #navigation #topNav #topButtons {
   display: flex;
   align-items: center;
+  max-height: 52.5px;
 }
-body #nav #topNav #topButtons .topButton {
+body #navigation #topNav #topButtons .topButton {
   display: flex;
   text-decoration: none;
   justify-content: center;
@@ -41,34 +55,35 @@ body #nav #topNav #topButtons .topButton {
   border-radius: 100px;
   height: 50px;
 }
-body #nav #topNav #topButtons .topButton p {
+body #navigation #topNav #topButtons .topButton p {
   font-size: 2em;
   color: black;
 }
-body #nav #topNav #topButtons #trendingButton {
+body #navigation #topNav #topButtons #trendingButton {
   margin-right: 2vw;
 }
-body #nav #topNav #topButtons #trendingButton img {
+body #navigation #topNav #topButtons #trendingButton img {
   width: 3em;
 }
-body #nav #topNav #topButtons #favoritesButton {
+body #navigation #topNav #topButtons #favoritesButton {
   margin-right: 2vw;
 }
-body #nav #topNav #topButtons #favoritesButton img {
+body #navigation #topNav #topButtons #favoritesButton img {
   width: 3em;
 }
-body #nav #topNav #topButtons #loginButton img {
+body #navigation #topNav #topButtons #loginButton img {
   width: 3em;
   border-radius: 100vw;
 }
-body #nav #searchBar {
+body #navigation #searchBar {
   background-color: #FFF;
   border-radius: 100px;
   height: 50px;
   display: flex;
   margin: 30px 40px;
 }
-body #nav #searchBar #searchInput {
+body #navigation #searchBar #searchInput {
+  width: 0px;
   font-size: 1.5em;
   border-radius: 100px;
   padding: 0 0 0 15px;
@@ -78,7 +93,7 @@ body #nav #searchBar #searchInput {
   background-color: transparent;
   font-family: "Rubik", sans-serif;
 }
-body #nav #searchBar #searchButton {
+body #navigation #searchBar #searchButton {
   align-self: center;
   margin-right: 4px;
   width: 42px;
@@ -90,8 +105,27 @@ body #nav #searchBar #searchButton {
   cursor: pointer;
   padding: 5px;
 }
-body #nav #searchBar #searchButton:hover {
+body #navigation #searchBar #searchButton:hover {
   background-color: #151F25;
+}
+body .row {
+  font-family: "Rubik", sans-serif;
+}
+body .row .btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+  font-family: "Rubik", sans-serif;
+}
+body .row .btn-google {
+  color: white !important;
+  background-color: #ea4335;
+  font-family: "Rubik", sans-serif;
+}
+body .row .btn-facebook {
+  color: white !important;
+  background-color: #3b5998;
+  font-family: "Rubik", sans-serif;
 }
 
 #content {
@@ -137,6 +171,8 @@ body #nav #searchBar #searchButton:hover {
 #content #gifContainer .gifDiv {
   position: relative;
   border-radius: 10px;
+  margin-bottom: 10px;
+  margin-right: -5px;
 }
 #content #gifContainer .gifDiv .mainImage {
   width: 100%;
